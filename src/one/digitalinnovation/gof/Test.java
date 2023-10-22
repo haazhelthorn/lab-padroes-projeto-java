@@ -8,6 +8,7 @@ import one.digitalinnovation.gof.strategy.Comportamento;
 import one.digitalinnovation.gof.strategy.ComportamentoAgressivo;
 import one.digitalinnovation.gof.strategy.ComportamentoDefensivo;
 import one.digitalinnovation.gof.strategy.ComportamentoNormal;
+import one.digitalinnovation.gof.strategy.ComportamentoCauteloso;
 import one.digitalinnovation.gof.strategy.Robo;
 
 public class Test {
@@ -36,7 +37,8 @@ public class Test {
 		Comportamento defensivo = new ComportamentoDefensivo();
 		Comportamento normal = new ComportamentoNormal();
 		Comportamento agressivo = new ComportamentoAgressivo();
-		
+		Comportamento cauteloso = new ComportamentoCauteloso();
+
 		Robo robo = new Robo();
 		robo.setComportamento(normal);
 		robo.mover();
@@ -48,6 +50,9 @@ public class Test {
 		robo.mover();
 		robo.mover();
 		
+		robo.setComportamento(cauteloso);
+		robo.mover();
+
 		// Facade
 		
 		Facade facade = new Facade();
